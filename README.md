@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MedTimeLine – Your Health Hub
+
+**MedTimeLine** is a medical record management web application that helps users organize their health information in one place. It brings together medical records, prescriptions, medications, allergies, and health conditions in a simple, easy-to-navigate interface.
+
+The application is designed to help users maintain their medical history, share selected information with trusted doctors, and access important health details when needed.
+
+## Key Features
+
+- **Dashboard:** Provides a central place to access health information.
+- **Medical Records:** Organizes medical documents, reports, prescriptions, and discharge summaries.
+- **Document Upload:** Allows users to upload medical records in supported file formats, including PDFs.
+- **Medication Management:** Helps users keep track of their medications and prescriptions.
+- **Allergy Management:** Organizes information about known allergies.
+- **Health Conditions:** Keeps relevant medical conditions accessible in one place.
+- **Secure Sharing:** Supports the concept of sharing selected medical information through time-limited access.
+- **Emergency View:** Provides quick access to important medical information.
+- **Safety Checks:** Aims to highlight potentially overlapping prescriptions and reminders for repeat tests.
+
+## Technology Stack
+
+| Technology | Purpose |
+|---|---|
+| Next.js | Application framework and routing |
+| React | User interface development |
+| TypeScript | Type-safe application development |
+| Tailwind CSS | Styling and responsive layouts |
+| Neon Serverless PostgreSQL | Database connectivity and storage |
+| Zod | Data validation |
+| Lucide React | Icons and interface elements |
+| Recharts | Charts and data visualization |
+| QRCode | QR code generation |
+| Anthropic SDK | AI integration capabilities |
+
+## Project Implementation
+
+### 1. Frontend Development
+The frontend is built using Next.js and React. It provides a sidebar for navigating between the dashboard, medical records, medications, allergies, conditions, shared access, and emergency view.
+
+### 2. Backend and Database
+The application uses Next.js to support its application logic and server-side functionality. Neon Serverless PostgreSQL provides database connectivity for storing and retrieving supported application data.
+
+### 3. Medical Document Management
+Users can upload medical documents to organize their health history. The intended workflow brings relevant information from medical documents into a unified view. Extracted information should be reviewed and confirmed by the user.
+
+### 4. Health Information Sharing
+The application is designed around controlled access to medical information. Users should be able to share only the information needed for a particular purpose, with appropriate access expiration and revocation controls.
+
+### 5. Emergency Access
+The emergency view is designed to make important medical details easier to find when they are needed quickly.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
+- Node.js and npm
+- Git
+- A Neon PostgreSQL database
+- An environment configuration for the services used by the application
+
+### Installation
+
+Clone the repository:
+
+git clone https://github.com/Likithasri9/MedTimeLine.git
+
+Move into the project directory:
+
+cd MedTimeLine
+
+Install the dependencies:
+
+npm install
+
+### Environment Configuration
+
+Create a `.env.local` file in the project root and configure the database connection:
+
+
+DATABASE_URL=your_neon_database_connection_string
+
+
+If an AI-powered feature requires an Anthropic API key, configure it using the environment variable expected by that feature. Never commit API keys, database passwords, or other secrets to GitHub.
+
+### Run the Application
+
+Start the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the application in your browser:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Build for Production
 
-## Learn More
+To create a production build, run:
 
-To learn more about Next.js, take a look at the following resources:
+npm run build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To start the production server after a successful build:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+npm run start
 
-## Deploy on Vercel
+## Project Goals
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Maintain medical information in one organized location.
+- Make medical records easier to access and review.
+- Support controlled sharing of health information.
+- Improve access to important medical details during emergencies.
+- Help users identify information that may require further review by a healthcare professional.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Important Disclaimer
+
+MedTimeLine is a medical record organization tool, not a diagnostic system. It does not replace professional medical advice. Medication warnings, extracted document information, and other health-related details must be verified before being relied upon.
+
+The security of medical information depends on the correct implementation and testing of authentication, authorization, database access controls, and sharing permissions.
+
+## Repository
+
+GitHub: https://github.com/Likithasri9/MedTimeLine
+
+## License
+
+Refer to the repository's license information for the applicable terms of use.
